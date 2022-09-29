@@ -27,6 +27,11 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+transition: 1s;
+  transform: scale(0.4);
+}
+.box:hover{
+  transform: scale(1);
 }
 
 .iç {
