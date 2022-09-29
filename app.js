@@ -23,46 +23,53 @@ tarih = `${now.toLocaleString().slice(0, 2)} ${
 } ${now.getFullYear()}`;
 
 
-let hour = now.getHours();
+let hour =now.getHours();
 
 let hourkey = hour;
 
 let min = now.getMinutes();
 
 let sec = now.getSeconds();
-let zam;
+let zam = " AM ";
 
 const bakar = function sas() {
+  
+   if (hourkey > 23) {
+     hour = 0;
+     hourkey = 0;
+   }
+   if (hourkey >= 12) {
+     zam = " PM ";
+   } else {
+     zam = " AM ";
+   }
+
+   if (hour == 13) {
+     hour = 1;
+   }
+
   if (sec == 59) {
     sec = -1;
     min += 1;
-    if (min == 60) {
+    if (min > 59) {
       min = 0;
       hour += 1;
       hourkey += 1;
-
-      if (hourkey == 24) {
+      if (hour > 23) {
         hour = 0;
-        hourkey = 0;
-      }
-
-      if (hour > 12) {
-        hour = 1;
       }
     }
   }
   sec += 1;
 
-  if (hour >= 12) {
-    zam = " PM ";
-  } else {
-    zam = " AM ";
-  }
+  
   üst.innerText = tarih;
   alt.innerText = `${String(hour).padStart(2, "0")}:${String(min).padStart(
     2,
     "0"
   )}:${String(sec).padStart(2, "0")} `;
-  span.innerText = zam;
+span.innerText = zam;
 };
 setInterval(bakar, 1000);
+console.log(hourkey);
+console.log(hour);
