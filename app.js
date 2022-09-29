@@ -22,8 +22,7 @@ tarih = `${now.toLocaleString().slice(0, 2)} ${
   month[now.getMonth()]
 } ${now.getFullYear()}`;
 
-
-let hour =now.getHours();
+let hour = now.getHours();
 
 let hourkey = hour;
 
@@ -33,43 +32,37 @@ let sec = now.getSeconds();
 let zam = " AM ";
 
 const bakar = function sas() {
-  
-   if (hourkey > 23) {
-     hour = 0;
-     hourkey = 0;
-   }
-   if (hourkey >= 12) {
-     zam = " PM ";
-   } else {
-     zam = " AM ";
-   }
+  if (hourkey >= 12) {
+    zam = " PM ";
+  }
 
-   if (hour == 13) {
-     hour = 1;
-   }
-
-  if (sec == 59) {
-    sec = -1;
+  sec += 1;
+  if (sec == 60) {
+    sec = 0;
     min += 1;
     if (min > 59) {
       min = 0;
       hour += 1;
       hourkey += 1;
-      if (hour > 23) {
+      if (hourkey > 23) {
         hour = 0;
+        hourkey = 0;
+      }
+      if (hourkey >= 12) {
+        zam = " PM ";
+      }
+      if (hourkey < 12) {
+        zam = " AM ";
+      }
+
+      if (hour > 12) {
+        hour = hour - 12;
       }
     }
   }
-  sec += 1;
 
-  
   üst.innerText = tarih;
-  alt.innerText = `${String(hour).padStart(2, "0")}:${String(min).padStart(
-    2,
-    "0"
-  )}:${String(sec).padStart(2, "0")} `;
-span.innerText = zam;
+  alt.innerText = `${String(hour).padStart(2, "0")}:${String(min).padStart(2,"0")}:${String(sec).padStart(2, "0")} `;
+  span.innerText = zam;
 };
 setInterval(bakar, 1000);
-console.log(hourkey);
-console.log(hour);

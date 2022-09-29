@@ -1,4 +1,6 @@
-@font-face {src: url("put_the_location_to_your_font.ttf or .otf")}
+@font-face {
+  src: url("put_the_location_to_your_font.ttf or .otf");
+}
 
 body {
   display: flex;
@@ -15,26 +17,74 @@ body {
   overflow: hidden;
   position: relative;
 }
-div {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  border-radius: 30px;
+.box {
+  position: relative;
+  width: 600px;
+  height: 200px;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
+.iç {
+  position: absolute;
+
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  border-radius: 20px;
+  inset: 5px;
+  background: #0c1022;
+  z-index: 5;
+}
+.box::after {
+  content: "";
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #d400d4
+  );
+  animation: animate 4s linear infinite;
+  animation-delay: -2s;
+}
+.box::before {
+  content: "";
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  background-image: conic-gradient(
+    transparent,
+    transparent,
+    transparent,
+    #00ccff
+  );
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .üst {
-  
   display: inline-block;
 
-  color: rgb(73, 88, 88);
+  color: rgb(99, 124, 124);
 }
 
 .alt {
   width: 250px;
   display: inline-block;
- margin-top: 0;
+  margin-top: 0;
   color: rgb(223, 81, 81);
 }
 span {
