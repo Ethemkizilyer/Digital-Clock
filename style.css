@@ -42,21 +42,14 @@ body {
 .box::after {
   content: "";
   position: absolute;
-  width: 700px;
-  height: 700px;
-  background-image:linear-gradient(#add400,transparent,#fcfcfc);
-  animation: animate 4s linear infinite;
-  animation-delay: -2s;
-}
-.box::before {
-  content: "";
-  position: absolute;
+  width: 650px;
+  height:650px;
+  background-image:linear-gradient(#fcfcfc,transparent,#fcfcfc);
+  animation: animate 3s linear infinite;
   border-radius: 50%;
-  width: 700px;
-  height: 700px;
-  background-image: linear-gradient(#3780bb,transparent,#ffffff);
-  animation: animate 4s linear infinite;
+  
 }
+
 
 @keyframes animate {
   0% {
