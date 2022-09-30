@@ -49,6 +49,9 @@ const bakar = function sas() {
   if (hourkey >= 12) {
     zam = " PM ";
   }
+  if (hour > 12) {
+    hour = hour - 12;
+  }
 
   sec += 1;
   if (sec == 60) {
@@ -68,10 +71,11 @@ const bakar = function sas() {
       if (hourkey < 12) {
         zam = " AM ";
       }
-
-      if (hour > 12) {
-        hour = hour - 12;
-      }
+console.log(hour);
+      // if (hour > 12) {
+      //   hour = hour - 12;
+      // }
+      console.log(hour);
     }
   }
 
