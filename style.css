@@ -135,8 +135,4 @@ button:hover {
     transform: translateX(-0.5rem);
   }
 }
-@media (max-width: 600px) {
-  .alarm {
-    transform: translateY(-10rem);
-  }
-}
+
