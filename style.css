@@ -20,7 +20,7 @@ body {
 }
 .box {
   position: relative;
-  width: 600px;
+  min-width: 600px;
   height: 200px;
   background: rgba(0, 0, 0, 0.75);
   border-radius: 20px;
@@ -30,11 +30,12 @@ body {
   overflow: hidden;
 transition: 1s;
   transform: scale(0.5);
+  border: 1px solid red;
 
 }
 .box:hover{
   transform: scale(1);
-width: 600px;
+min-width: 600px;
   height: 200px;
 }
 
@@ -73,6 +74,7 @@ gap:1rem;
   display: inline-block;
 
   color: rgb(99, 124, 124);
+  
 }
 
 .alt {
@@ -134,4 +136,17 @@ button:hover{
     opacity: 0;
   }
 
+}
+
+@media (max-width:1000px){
+  .alarm{
+    /* margin-top: 0; */
+    /* border: 1px solid red; */
+    transform: translateY(-10rem);
+    transform: translateX(-0.5rem);
+  }
+  .box{
+    /* border: 1px solid red; */
+    
+  }
 }
