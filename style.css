@@ -30,7 +30,6 @@ body {
   overflow: hidden;
   transition: 1s;
   transform: scale(0.5);
-  border: 1px solid red;
 }
 .box:hover {
   transform: scale(1);
