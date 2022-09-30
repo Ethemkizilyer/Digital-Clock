@@ -36,22 +36,23 @@ tarih = `${now.toLocaleString().slice(0, 2)} ${
   month[now.getMonth()]
 } ${now.getFullYear()}`;
 
-let hour = now.getHours();
+let hour = 12;
 
-let hourkey = hour;
+let hourkey = 12;
 
-let min = now.getMinutes();
+let min = 59;
 
-let sec = now.getSeconds();
+let sec = 55;
 let zam = " AM ";
 
 const bakar = function sas() {
-  if (hourkey >= 12) {
-    zam = " PM ";
-  }
   if (hour > 12) {
     hour = hour - 12;
   }
+  if (hourkey >= 12) {
+    zam = " PM ";
+  }
+  
 
   sec += 1;
   if (sec == 60) {
@@ -72,9 +73,9 @@ const bakar = function sas() {
         zam = " AM ";
       }
 console.log(hour);
-      // if (hour > 12) {
-      //   hour = hour - 12;
-      // }
+      if (hour > 12) {
+        hour = hour - 12;
+      }
       console.log(hour);
     }
   }
