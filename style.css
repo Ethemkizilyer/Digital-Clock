@@ -29,7 +29,7 @@ body {
   justify-content: center;
   overflow: hidden;
 transition: 1s;
-/*  transform: scale(0.6);*/
+  transform: scale(0.5);
 
 }
 .box:hover{
@@ -47,6 +47,7 @@ width: 600px;
   inset: 5px;
   background: #0c1022;
   z-index: 1;
+gap:1rem;
 }
 .box::after {
   content: "";
