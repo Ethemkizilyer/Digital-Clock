@@ -36,13 +36,13 @@ tarih = `${now.toLocaleString().slice(0, 2)} ${
   month[now.getMonth()]
 } ${now.getFullYear()}`;
 
-let hour = 12;
+let hour = now.getHours();
 
-let hourkey = 12;
+let hourkey =hour;
 
-let min = 59;
+let min = now.getMinutes();
 
-let sec = 55;
+let sec = now.getSeconds();
 let zam = " AM ";
 
 const bakar = function sas() {
