@@ -133,6 +133,12 @@ button:hover {
   .alarm {
     transform: translateY(-10rem);
     transform: translateX(-0.5rem);
+
+  }
+  #uyarı{
+    font-size: 1rem;
+    bottom: 1rem;
+  right: 1rem;
   }
 }
 
