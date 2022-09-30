@@ -29,11 +29,13 @@ body {
   justify-content: center;
   overflow: hidden;
 transition: 1s;
-  transform: scale(0.6);
+/*  transform: scale(0.6);*/
 
 }
 .box:hover{
   transform: scale(1);
+width: 600px;
+  height: 200px;
 }
 
 .iç {
