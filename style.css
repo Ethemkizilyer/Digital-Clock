@@ -120,6 +120,24 @@ button:hover {
 .uyarı {
   animation: ethem 3s 1;
 }
+
+.istek {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Courier New", Courier, monospace;
+}
+.ara {
+  width: 8px;
+  color: black;
+  padding-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#vakit {
+  margin-left: 5px;
+}
 @keyframes ethem {
   from {
     opacity: 1;
@@ -133,12 +151,8 @@ button:hover {
   .alarm {
     transform: translateY(-10rem);
     transform: translateX(-0.5rem);
-
   }
-  #uyarı{
+  #uyarı {
     font-size: 1rem;
-
   }
-  
 }
-
